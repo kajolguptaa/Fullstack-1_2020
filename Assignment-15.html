@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-15</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: grey;
+            padding: 50px;
+        }
+        h1{
+            text-align: center;
+            font-size: 70px;
+            margin-bottom: 50px;
+            color: white;
+            font-variant: small-caps;
+        }
+        p{
+            display: inline-block;
+            text-align: center;
+            font-size: 3rem;
+            margin: 0 70px;
+            color: yellow;
+        }
+        div{
+            text-align: center;
+        }
+        button{
+            background-color: yellow;
+            line-height: 3rem;
+            width: 3.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <div>
+        <button id="minus" onclick="decrement()">_</button>
+        <p id="num">0</p>
+        <button id="plus" onclick="increment()">+</button>
+    </div>
+    <script>
+        var number=document.getElementById("num");
+        var btn_minus=document.getElementById("minus");
+        var btn_plus=document.getElementById("plus");
+
+        count=0;
+        if(count==0){
+            btn_minus.disabled=true;
+        }
+
+        function decrement(){
+            if(count>0){
+                number.innerHTML=--count;
+            }
+            if(count>0){
+                btn_minus.disabled=false;
+            }
+            else{
+                btn_minus.disabled=true;
+            }
+        }
+        function increment(){
+            number.innerHTML=++count;
+            if(count>0){
+                btn_minus.disabled=false;
+            }
+            else{
+                btn_minus.disabled=true;
+            }
+        }
+    </script>
+</body>
+</html>

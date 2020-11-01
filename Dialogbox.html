@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dialog Boxes</title>
+</head>
+<body>
+    <button id="btn" onclick="hello()">Click Me</button>
+    <script>
+        function hello()
+        {
+            //Alert Dialog box
+            var x=10;
+            var y=20;
+            alert("This is the sum of two numbers=" + (x+y));
+             
+             //Confirm Dialog box
+            var opt=confirm("Do u want to store your data");
+            if(opt){
+                alert('Your data saved Successfully');
+            }
+            else{
+                alert("Your data not saved");
+            }
+             //Prompt Dialog Box
+        var name=prompt("Enter your name");
+        if(name.length>0 && name!="null")
+        {
+            alert("Welcome" + name);
+        }
+        else{
+            alert("Welcome Anonymous");
+        }
+        }
+       
+
+    </script>
+</body>
+</html>
